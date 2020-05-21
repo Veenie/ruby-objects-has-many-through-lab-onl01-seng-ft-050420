@@ -18,13 +18,13 @@ class Doctor
   def appointments
     Appointment.all.select do |appt|
       appt.doctor == self
-    
+    end
   end
   
   def patients
     appointments.map do |apt|
       apt.patient
-    
+    end
   end
 end    
     
